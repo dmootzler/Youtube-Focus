@@ -1,0 +1,34 @@
+<!doctype html>
+<style type="text/css">
+	#mainPopup {
+		padding: 10px;
+		font-family: Helvetica, Ubuntu, Arial, sans-serif;
+        
+        width: 250px;
+	}
+	h1 {
+		font-size: 20px;
+        text-align: center;
+        font-weight: 200;
+	}
+    .sub-buttons {
+        margin-left: 15px;
+    }
+    input {
+        margin-left: 0px;
+    }
+</style>
+
+<div id="mainPopup">
+    <h1>YouTube Focuser</h1>
+    <form>
+        <input id="enable" type="checkbox" name="enable" value="enableLock">Enable FocusLock<br>
+        <div class="sub-buttons">
+            <input class="radio" type="radio" name="target" value="all">Block all related videos<br>
+            <input class="radio" type="radio" name="target" value="recommended">Only block recommended videos<br>
+            <input type="checkbox" name="comments" value="blockComments">Hide comment section
+        </div>
+    </form>
+</div>
+<script src="../../js/jquery/"></script>
+<script type="text/javascript" src="browser_action.js"></script>

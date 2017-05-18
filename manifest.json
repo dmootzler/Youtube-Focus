@@ -1,0 +1,43 @@
+{
+  "name": "YouTube Focus Lock",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "In order to help you stay focused when studying on YouTube, this extension hides or limits the 'related videos' panel to minimize distracting suggestions.",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "default_locale": "en",
+  "background": {
+    "page": "src/bg/background.html",
+    "persistent": true
+  },
+  "browser_action": {
+    "default_icon": "icons/icon19.png",
+    "default_title": "YouTube Focus Lock",
+    "default_popup": "src/browser_action/browser_action.html"
+  },
+  "permissions": [
+    "https://youtube.com/*",
+    "https://youtu.be/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.youtube.com/*"
+      ],
+      "css": [
+        "src/inject/inject.css"
+      ]
+    },
+    {
+      "matches": [
+        "https://www.youtu.be/*"
+      ],
+      "js": [
+        "src/inject/inject.js"
+      ]
+    }
+  ]
+}
